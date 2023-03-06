@@ -44,7 +44,7 @@ function App() {
           url={quotesURL}
           size={32}
           round={true}
-          title="Share Quote"
+          title={data.content}
           children={data.content}
         >
           WhatsApp
