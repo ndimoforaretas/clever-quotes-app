@@ -4,3 +4,16 @@
   padding: 2rem;
   text-align: center;
 }
+
+.whatsapp {
+  cursor: pointer;
+  color: #25d366;
+  font-size: 40px;
+}
+
+.whatsapp:hover,
+.whatsapp:active {
+  color: #075e54;
+  transition: all 0.5s;
+  transform: scale(1.1);
+}

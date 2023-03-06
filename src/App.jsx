@@ -1,6 +1,8 @@
 import { useEffect, useState } from "react";
-import { Button, Card } from "react-bootstrap";
+import { Button, Card, Stack } from "react-bootstrap";
 import { WhatsappShareButton } from "react-share";
+import { IoLogoWhatsapp } from "react-icons/io";
+
 import "./App.css";
 
 function App() {
@@ -37,16 +39,22 @@ function App() {
             <cite title={data.title}>{data.author}</cite>
           </footer>
         </blockquote>
-        <Button className="primary" onClick={handleClick}>
-          Neu Quote
-        </Button>{" "}
-        <WhatsappShareButton
-          url={"https://aretas-quotes-app.netlify.app/"}
-          size={32}
-          title={`"${data.content}", by: ${data.author}`}
+        <Stack
+          className="col-md-5 mx-auto justify-content-evenly"
+          gap={4}
+          direction="horizontal"
         >
-          WhatsApp
-        </WhatsappShareButton>
+          <Button className="primary" onClick={handleClick}>
+            Neu Quote
+          </Button>{" "}
+          <WhatsappShareButton
+            url={"https://aretas-quotes-app.netlify.app/"}
+            size={32}
+            title={`"${data.content}", by: ${data.author}`}
+          >
+            <IoLogoWhatsapp className="whatsapp" />
+          </WhatsappShareButton>
+        </Stack>
       </Card.Body>
     </Card>
   );
