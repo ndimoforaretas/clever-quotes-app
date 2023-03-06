@@ -38,7 +38,7 @@ function App() {
           </footer>
         </blockquote>
         <Button className="primary" onClick={handleClick}>
-          Nue Quote
+          Neu Quote
         </Button>{" "}
         <WhatsappShareButton
           url={"https://aretas-quotes-app.netlify.app/"}
