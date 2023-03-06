@@ -1,23 +1,45 @@
+import { useEffect, useState } from "react";
 import { Button, Card } from "react-bootstrap";
+
 import "./App.css";
 
 function App() {
+  const [data, setData] = useState({});
+
+  const quotesURL = "https://api.quotable.io/random";
+
+  const fetchData = async (url) => {
+    try {
+      const response = await fetch(url);
+      const data = await response.json();
+
+      setData(data);
+    } catch (err) {
+      console.log(err);
+    }
+  };
+
+  useEffect(() => {
+    fetchData(quotesURL);
+  }, []);
+
+  const handleClick = () => {
+    fetchData(quotesURL);
+  };
+
   return (
     <Card>
       <Card.Header>Clever Quote</Card.Header>
       <Card.Body>
         <blockquote className="blockquote mb-0">
-          <p>
-            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ex,
-            dignissimos placeat dolorem esse et error reiciendis nulla ratione.
-            Quas ad totam aspernatur, saepe cumque deserunt impedit autem quo
-            blanditiis reiciendis.
-          </p>
+          <p>{data.content}</p>
           <footer className="blockquote-footer">
-            Someone famous <cite title="Source Title">Source Title</cite>
+            <cite title="Source Title">{data.author}</cite>
           </footer>
         </blockquote>
-        <Button className="primary">Nue Quote</Button>
+        <Button className="primary" onClick={handleClick}>
+          Nue Quote
+        </Button>
       </Card.Body>
     </Card>
   );
