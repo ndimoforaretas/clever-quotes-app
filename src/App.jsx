@@ -43,7 +43,6 @@ function App() {
         <WhatsappShareButton
           url={"https://aretas-quotes-app.netlify.app/"}
           size={32}
-          round={true}
           title={data.content}
         >
           WhatsApp
