@@ -41,11 +41,10 @@ function App() {
           Nue Quote
         </Button>{" "}
         <WhatsappShareButton
-          url={quotesURL}
+          url={"https://aretas-quotes-app.netlify.app/"}
           size={32}
           round={true}
           title={data.content}
-          children={data.content}
         >
           WhatsApp
         </WhatsappShareButton>
