@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import { Button, Card } from "react-bootstrap";
-
+import { WhatsappShareButton } from "react-share";
 import "./App.css";
 
 function App() {
@@ -31,15 +31,24 @@ function App() {
     <Card>
       <Card.Header>Clever Quote</Card.Header>
       <Card.Body>
-        <blockquote className="blockquote mb-0">
+        <blockquote className="blockquote mb-3">
           <p>{data.content}</p>
-          <footer className="blockquote-footer">
-            <cite title="Source Title">{data.author}</cite>
+          <footer className="blockquote-footer mt-3">
+            <cite title={data.title}>{data.author}</cite>
           </footer>
         </blockquote>
         <Button className="primary" onClick={handleClick}>
           Nue Quote
-        </Button>
+        </Button>{" "}
+        <WhatsappShareButton
+          url={quotesURL}
+          size={32}
+          round={true}
+          title="Share Quote"
+          children={data.content}
+        >
+          WhatsApp
+        </WhatsappShareButton>
       </Card.Body>
     </Card>
   );
