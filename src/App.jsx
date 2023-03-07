@@ -1,15 +1,26 @@
+// hooks imports
 import { useEffect, useState } from "react";
+
+// component imports
 import { Button, Card, Stack } from "react-bootstrap";
+
+// whatsapp share capabilities
 import { WhatsappShareButton } from "react-share";
+
+// react icon
 import { IoLogoWhatsapp } from "react-icons/io";
 
+// external stylesheet
 import "./App.css";
 
 function App() {
+  // state declaraion
   const [data, setData] = useState({});
 
+  // url variable declaration
   const quotesURL = "https://api.quotable.io/random";
 
+  // asynchronous fetch function with async/await and try-catch
   const fetchData = async (url) => {
     try {
       const response = await fetch(url);
@@ -21,11 +32,13 @@ function App() {
     }
   };
 
+  // useEffect
   useEffect(() => {
     fetchData(quotesURL);
   }, []);
 
-  const handleClick = () => {
+  // handlerfunction
+  const handleNewQuote = () => {
     fetchData(quotesURL);
   };
 
@@ -43,14 +56,16 @@ function App() {
       <Card.Footer>
         <Stack
           className="col-md-5 mx-auto justify-content-evenly"
+          // in-line styling
           gap={4}
           direction="horizontal"
         >
-          <Button className="primary" onClick={handleClick}>
+          <Button className="primary" onClick={handleNewQuote}>
             Neu Quote
-          </Button>{" "}
+          </Button>
           <WhatsappShareButton
             url={"https://aretas-quotes-app.netlify.app/"}
+            // in-line styling
             size={32}
             title={`"${data.content}" ${"\n"} ~${data.author}`}
           >
