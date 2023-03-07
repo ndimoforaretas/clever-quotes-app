@@ -1,12 +1,12 @@
 # :relieved: Clever Quotes App
 
+Description is available in the following translations / Die Beschreibung liegt in den folgenden Übersetzungen vor:
+
+[English (Englisch)](#english)<br>
+
+[German (Deutsch)](#german)<br>
+
 ![Randomquotes-app Screenshot](./src/assets/images/Randomquotes-app.png "Randomquotes-app Screenshot")
-
-Translations:
-
-[English](#english)<br>
-
-[German](#german)<br>
 
 #
 
