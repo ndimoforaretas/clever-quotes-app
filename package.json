@@ -1,5 +1,6 @@
 {
   "name": "clever-quotes-app",
+  "author": "Ndimofor Aretas",
   "private": true,
   "version": "1.0.0",
   "type": "module",
