@@ -10,7 +10,7 @@ Description is available in the following translations / Die Beschreibung liegt 
 
 #
 
-## <a name ="german">German Description</a>
+## <a name ="german">German Description / Deutsche Beschreibung</a>
 
 #
 
@@ -135,7 +135,7 @@ npm i vite-plugin-pwa -D
 
 #
 
-## <a name ="english">English Description</a>
+## <a name ="english">English Description / Englische Beschreibung</a>
 
 #
 
