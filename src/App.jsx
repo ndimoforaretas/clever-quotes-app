@@ -31,7 +31,7 @@ function App() {
 
   return (
     <Card>
-      <Card.Header>Clever Quote</Card.Header>
+      <Card.Header>Clever Quotes</Card.Header>
       <Card.Body>
         <blockquote className="blockquote mb-3">
           <p>{data.content}</p>
@@ -39,6 +39,8 @@ function App() {
             <cite title={data.title}>{data.author}</cite>
           </footer>
         </blockquote>
+      </Card.Body>
+      <Card.Footer>
         <Stack
           className="col-md-5 mx-auto justify-content-evenly"
           gap={4}
@@ -50,12 +52,12 @@ function App() {
           <WhatsappShareButton
             url={"https://aretas-quotes-app.netlify.app/"}
             size={32}
-            title={`"${data.content}", by: ${data.author}`}
+            title={`"${data.content}" ${"\n"} ~${data.author}`}
           >
             <IoLogoWhatsapp className="whatsapp" />
           </WhatsappShareButton>
         </Stack>
-      </Card.Body>
+      </Card.Footer>
     </Card>
   );
 }
