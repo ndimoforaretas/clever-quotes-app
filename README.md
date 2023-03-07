@@ -1,5 +1,7 @@
 # :relieved: Clever Quotes App
 
+![Randomquotes-app Screenshot](./src/assets/images/Randomquotes-app.png "Randomquotes-app Screenshot")
+
 Translations:
 
 [English](#english)<br>
@@ -23,8 +25,6 @@ Da ich es liebe, Zitate über meinen WhatsApp-Status zu teilen, habe ich die Wha
 Das WhatsApp-Symbol stammt von React Icons.
 
 Alle Links sind unten aufgeführt.
-
-![Randomquotes-app Screenshot](./src/assets/images/Randomquotes-app.png "Randomquotes-app Screenshot")
 
 #
 
@@ -150,8 +150,6 @@ Because I love sharing quotes on my WhatsApp status, I added the WhatsApp share 
 The WhatsApp icon is from React Icons.
 
 All the links are listed below.
-
-![Randomquotes-app Screenshot](./src/assets/images/Randomquotes-app.png "Randomquotes-app Screenshot")
 
 #
 
