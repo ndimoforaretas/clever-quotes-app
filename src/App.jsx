@@ -16,6 +16,8 @@ import "./App.css";
 function App() {
   // state declaraion
   const [data, setData] = useState({});
+  // Random Image
+  const imgSrc = `https://picsum.photos/seed/${data.length}/300/200`;
 
   // url variable declaration
   const quotesURL = "https://api.quotable.io/random";
@@ -45,6 +47,8 @@ function App() {
   return (
     <Card>
       <Card.Header>Clever Quotes</Card.Header>
+      <Card.Img src={imgSrc} />
+
       <Card.Body>
         <blockquote className="blockquote mb-3">
           <p>{data.content}</p>
@@ -67,7 +71,9 @@ function App() {
             url={"https://aretas-quotes-app.netlify.app/"}
             // in-line styling
             size={32}
-            title={`"${data.content}" ${"\n"} ~${data.author}`}
+            title={`"${imgSrc}" ${"\n"} "${data.content}" ${"\n"} ~${
+              data.author
+            }`}
           >
             <IoLogoWhatsapp className="whatsapp" />
           </WhatsappShareButton>
