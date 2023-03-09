@@ -44,6 +44,7 @@ function App() {
     fetchData(quotesURL);
   };
 
+  console.log(date);
   return (
     <Card>
       <Card.Header>Clever Quotes</Card.Header>
@@ -71,9 +72,7 @@ function App() {
             url={"https://aretas-quotes-app.netlify.app/"}
             // in-line styling
             size={32}
-            title={`"${imgSrc}" ${"\n"} "${data.content}" ${"\n"} ~${
-              data.author
-            }`}
+            title={`"${data.content}" ${"\n"} ~${data.author}`}
           >
             <IoLogoWhatsapp className="whatsapp" />
           </WhatsappShareButton>

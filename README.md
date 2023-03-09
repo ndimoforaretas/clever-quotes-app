@@ -30,7 +30,9 @@ Alle Links sind unten aufgeführt.
 
 ## :cowboy_hat_face: Verwendetes API:
 
-- Random Quotes API: https://github.com/lukePeavey/quotable
+- [Random Quotes API](https://github.com/lukePeavey/quotable) für die zufälligen Zitate
+
+- [Lorem Picsum](https://picsum.photos/) für die zufälligen Bilder.
 
 ```
 
@@ -153,13 +155,19 @@ All the links are listed below.
 
 #
 
-## :cowboy_hat_face: API used:
+## :cowboy_hat_face: APIs used:
 
-- Random Quotes API: https://github.com/lukePeavey/quotable
+- [Random Quotes API](https://github.com/lukePeavey/quotable) for the random Quotes
+
+- [Lorem Picsum](https://picsum.photos/) for the random Pictures.
 
 ```
 
+// quotes
 https://api.quotable.io/random
+
+// images
+https://picsum.photos/seed/picsum/200/300
 
 ```
 
