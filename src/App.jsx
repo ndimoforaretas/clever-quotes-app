@@ -45,8 +45,8 @@ function App() {
   };
 
   const date = new Date();
-  const today = date.toLocaleString();
-  console.log(today);
+  const shareTime = date.toLocaleString();
+
   return (
     <Card>
       <Card.Header>Clever Quotes</Card.Header>
@@ -76,7 +76,7 @@ function App() {
             size={32}
             title={`"${data.content}" ${"\n"} ~ ${
               data.author
-            } ${"\n"} Share Date: ${today}`}
+            } ${"\n"} Share Date: ${shareTime}`}
           >
             <IoLogoWhatsapp className="whatsapp" />
           </WhatsappShareButton>
