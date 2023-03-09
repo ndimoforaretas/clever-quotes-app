@@ -44,7 +44,9 @@ function App() {
     fetchData(quotesURL);
   };
 
-  console.log(date);
+  const date = new Date();
+  const today = date.toLocaleString();
+  console.log(today);
   return (
     <Card>
       <Card.Header>Clever Quotes</Card.Header>
@@ -60,7 +62,7 @@ function App() {
       </Card.Body>
       <Card.Footer>
         <Stack
-          className="col-md-5 mx-auto justify-content-evenly"
+          className="col mx-auto justify-content-evenly"
           // in-line styling
           gap={4}
           direction="horizontal"
@@ -72,7 +74,9 @@ function App() {
             url={"https://aretas-quotes-app.netlify.app/"}
             // in-line styling
             size={32}
-            title={`"${data.content}" ${"\n"} ~${data.author}`}
+            title={`"${data.content}" ${"\n"} ~ ${
+              data.author
+            } ${"\n"} Share Date: ${today}`}
           >
             <IoLogoWhatsapp className="whatsapp" />
           </WhatsappShareButton>
