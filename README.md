@@ -26,6 +26,10 @@ Das WhatsApp-Symbol stammt von React Icons.
 
 Alle Links sind unten aufgeführt.
 
+<hr>
+
+### :bulb: Für maximale Vergnügen, INSTALLIEREN und verwenden Sie diese App auf einem Smartphone!
+
 #
 
 ## :cowboy_hat_face: Verwendetes API:
@@ -143,7 +147,7 @@ npm i vite-plugin-pwa -D
 
 ## :hugs: Introduction:
 
-This is a beginner friendly fun ReactJs project.
+This PWA (Progressive Web App) is a beginner friendly fun ReactJs project.
 
 It's the classic Random Quote Generator App based off of Luke Peavey's Random Quotes API.
 
@@ -152,6 +156,10 @@ Because I love sharing quotes on my WhatsApp status, I added the WhatsApp share 
 The WhatsApp icon is from React Icons.
 
 All the links are listed below.
+
+<hr>
+
+### :bulb: For maximum satisfaction, INSTALL and use this app on a smart phone!
 
 #
 
@@ -170,8 +178,6 @@ https://api.quotable.io/random
 https://picsum.photos/seed/picsum/200/300
 
 ```
-
-## English Description
 
 #
 
