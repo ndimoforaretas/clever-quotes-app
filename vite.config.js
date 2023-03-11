@@ -30,11 +30,15 @@ export default defineConfig({
         lang: "de",
         scope: "/",
         screenshot: {
-          src: "/assets/images/screenshot1.png",
+          src: "/Randomquotes-app-screenshot.png",
           type: "image/png",
           sizes: "520x545",
         },
         theme_color: "#3367D6",
+        registerType: "autoUpdate",
+        devOptions: {
+          enabled: true,
+        },
       },
     }),
   ],
