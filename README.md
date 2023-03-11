@@ -8,6 +8,10 @@ Description is available in the following translations / Die Beschreibung liegt 
 
 ![Randomquotes-app Screenshot](./public/Randomquotes-app-screenshot.png "Randomquotes-app Screenshot")
 
+## :star_struck: Working Application Link:
+
+[Clever Quotes App](https://aretas-quotes-app.netlify.app/) hosted on [Netlify](https://www.netlify.com/)
+
 #
 
 ## <a name ="german">German Description / Deutsche Beschreibung</a>
@@ -132,12 +136,6 @@ npm i vite-plugin-pwa -D
 4. Die Fähigkeit, Ereignisse mit Hilfe von Handler-Funktionen zu behandeln
 
 <br>
-
-#
-
-## :star_struck: Live Link:
-
-[Clever Quotes App](https://aretas-quotes-app.netlify.app/) bei [Netlify](https://www.netlify.com/) gehostet.
 
 #
 
@@ -269,7 +267,3 @@ npm i vite-plugin-pwa -D
 <br>
 
 #
-
-## :star_struck: Live Link:
-
-[Clever Quotes App](https://aretas-quotes-app.netlify.app/) hosted on [Netlify](https://www.netlify.com/)
