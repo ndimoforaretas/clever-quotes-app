@@ -8,13 +8,8 @@ export default defineConfig({
     react(),
     VitePWA({
       manifest: {
-        name: "Clever Quotes: Random quotes to spice your day... Everyday!",
         short_name: "Clever Quotes",
-        start_url: "/",
-        display: "standalone",
-        background_color: "#8EC5FC",
-        lang: "de",
-        scope: "/",
+        name: "Clever Quotes: Random quotes to spice your day... Everyday!",
         icons: [
           {
             src: "/android-chrome-192x192.png",
@@ -27,6 +22,18 @@ export default defineConfig({
             type: "image/png",
           },
         ],
+        id: "/",
+        start_url: "/",
+        background_color: "#8EC5FC",
+        display: "standalone",
+        description: "Generate random quotes and share on WhatsApp",
+        lang: "de",
+        scope: "/",
+        screenshot: {
+          src: "/assets/images/screenshot1.png",
+          type: "image/png",
+          sizes: "520x545",
+        },
         theme_color: "#3367D6",
       },
     }),
