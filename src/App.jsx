@@ -50,7 +50,7 @@ function App() {
   return (
     <Card>
       <Card.Header>Clever Quotes</Card.Header>
-      <Card.Img src={imgSrc} />
+      <Card.Img src={imgSrc} alt={imgSrc} />
 
       <Card.Body>
         <blockquote className="blockquote mb-3">
