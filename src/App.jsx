@@ -84,10 +84,10 @@ function App() {
     <Card>
       <Card.Header>Clever Quotes</Card.Header>
       {loadingImage ? (
-        <>
+        <div className="col mx-auto">
           <Spinner animation="border" variant="primary" role="status" />
-          <p>Loading quote...</p>
-        </>
+          <p>Loading image...</p>
+        </div>
       ) : (
         <Card.Img src={image} alt="random image for a random quote" />
       )}
