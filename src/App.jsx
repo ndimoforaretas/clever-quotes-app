@@ -92,7 +92,7 @@ function App() {
           versuchen Sie es erneut.
         </Alert>
       )}
-      {/* handle quote loading */}
+      {/* handle image loading */}
       {loadingImage ? (
         <div className="col mx-auto">
           <Spinner animation="border" variant="primary" role="status" />
