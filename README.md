@@ -10,7 +10,7 @@ Description is available in the following translations / Die Beschreibung liegt 
 
 ## :star_struck: Working Application Link:
 
-[Clever Quotes App](https://aretas-quotes-app.netlify.app/) hosted on [Netlify](https://www.netlify.com/)
+[Clever Quotes App](https://clever-quotes-app.netlify.app/) hosted on [Netlify](https://www.netlify.com/)
 
 #
 
