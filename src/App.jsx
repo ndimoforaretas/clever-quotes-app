@@ -83,13 +83,20 @@ function App() {
   return (
     <Card>
       <Card.Header>Clever Quotes</Card.Header>
-      <Card.Img src={image} alt="random image for a random quote" />
+      {loadingImage ? (
+        <>
+          <Spinner animation="border" variant="primary" role="status" />
+          <p>Loading quote...</p>
+        </>
+      ) : (
+        <Card.Img src={image} alt="random image for a random quote" />
+      )}
 
       <Card.Body>
         <blockquote className="blockquote mb-3">
           {loadingData ? (
             <>
-              <Spinner animation="border" variant="primary" />
+              <Spinner variant="primary" animation="grow" role="status" />
               <p>Loading quote...</p>
             </>
           ) : (
