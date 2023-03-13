@@ -2,7 +2,7 @@
 import { useEffect, useState } from "react";
 
 // component imports
-import { Button, Card, Spinner, Stack } from "react-bootstrap";
+import { Alert, Button, Card, Spinner, Stack } from "react-bootstrap";
 
 // whatsapp share capabilities
 import { WhatsappShareButton } from "react-share";
@@ -83,6 +83,16 @@ function App() {
   return (
     <Card>
       <Card.Header>Clever Quotes</Card.Header>
+      {/* handle image Error */}
+      {imageError && (
+        <Alert variant="danger">
+          Something went wrong while getting the image. <br /> Please try again.{" "}
+          <hr />
+          Beim Abrufen des Bildes ist ein Fehler aufgetreten. <br /> Bitte
+          versuchen Sie es erneut.
+        </Alert>
+      )}
+      {/* handle quote loading */}
       {loadingImage ? (
         <div className="col mx-auto">
           <Spinner animation="border" variant="primary" role="status" />
@@ -94,6 +104,16 @@ function App() {
 
       <Card.Body>
         <blockquote className="blockquote mb-3">
+          {/* handle quote Error */}
+          {imageError && (
+            <Alert variant="danger">
+              Something went wrong while getting the quote. <br /> Please try
+              again. <hr />
+              Beim Abrufen des Zitats ist ein Fehler aufgetreten. <br /> Bitte
+              versuchen Sie es erneut.
+            </Alert>
+          )}
+          {/* handle quote loading */}
           {loadingData ? (
             <>
               <Spinner variant="primary" animation="grow" role="status" />
