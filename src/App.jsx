@@ -78,7 +78,7 @@ function App() {
   };
 
   const date = new Date();
-  const shareTime = date.toLocaleString();
+  const shareDate = date.toDateString();
 
   return (
     <Card>
@@ -105,7 +105,7 @@ function App() {
       <Card.Body>
         <blockquote className="blockquote mb-3">
           {/* handle quote Error */}
-          {imageError && (
+          {dataError && (
             <Alert variant="danger">
               Something went wrong while getting the quote. <br /> Please try
               again. <hr />
@@ -142,9 +142,8 @@ function App() {
             url={"https://clever-quotes-app.netlify.app/"}
             // in-line styling
             size={32}
-            title={`"${data.content}" ${"\n"} ~ ${
-              data.author
-            } ${"\n"} Share Date: ${shareTime}`}
+            title={`"${data.content}" ${"\n"} ~ ${data.author} ${"\n"} ${"\n"}
+            shareDate: ${shareDate}`}
           >
             <IoLogoWhatsapp className="whatsapp" />
           </WhatsappShareButton>
