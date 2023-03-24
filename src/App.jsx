@@ -79,7 +79,7 @@ function App() {
 
   const date = new Date();
   const shareDate = date.toDateString();
-
+  console.log(shareDate);
   return (
     <Card>
       <Card.Header>Clever Quotes</Card.Header>
@@ -143,7 +143,7 @@ function App() {
             // in-line styling
             size={32}
             title={`"${data.content}" ${"\n"} ~ ${data.author} ${"\n"} ${"\n"}
-            shareDate: ${shareDate}`}
+            Date Shared: ${shareDate}`}
           >
             <IoLogoWhatsapp className="whatsapp" />
           </WhatsappShareButton>
