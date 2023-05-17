@@ -9,14 +9,16 @@ import { WhatsappShareButton } from "react-share";
 
 // react icon
 import { IoLogoWhatsapp } from "react-icons/io";
+import { FaRandom } from "react-icons/fa";
 
 // external stylesheet
 import "./App.css";
+import QuotesCard from "./components/QuotesCard";
 
 function App() {
   // url variable declarations
   const quotesURL = "https://api.quotable.io/random";
-  const imageURL = "https://picsum.photos/300/200";
+  const imageURL = "https://picsum.photos/300/500";
 
   // set state declaraions:
 
@@ -29,82 +31,56 @@ function App() {
 
   // set the loading variables
   const [loadingData, setLoadingData] = useState(false);
-  const [loadingImage, setLoadingImage] = useState(false);
 
   // set Error variables
   const [dataError, setDataError] = useState(false);
-  const [imageError, setImageError] = useState(false);
 
-  // asynchronous fetch functions with async/await and try-catch
-
-  // fetch random quotes
-  const fetchData = async (url) => {
+  const fetchData = async () => {
     setLoadingData(true);
+    setDataError(false);
+
     try {
-      const response = await fetch(url);
-      const data = await response.json();
+      // fetch random quotes
+      const quoteContent = await fetch(quotesURL);
+      if (!quoteContent) {
+        throw new Error("quote not found");
+      }
+      const data = await quoteContent.json();
+
+      // set quote data
       setData(data);
+
+      // fetch random image
+      const imageContent = await fetch(imageURL);
+      if (!imageContent) {
+        throw new Error("image not found");
+      }
+      const image = imageContent.url;
+      setImage(image);
     } catch (err) {
-      console.log(err);
       setDataError(true);
     }
     setLoadingData(false);
   };
-
-  // fetch random image
-  const fetchImage = async (url) => {
-    setLoadingImage(true);
-    try {
-      const response = await fetch(url);
-      const imageURL = response.url;
-      setImage(imageURL);
-    } catch (err) {
-      console.log(err);
-      setImageError(true);
-    }
-    setLoadingImage(false);
-  };
-
   // useEffect
   useEffect(() => {
-    fetchData(quotesURL);
-    fetchImage(imageURL);
+    fetchData();
   }, []);
 
   // handlerfunction
   const handleNewQuote = () => {
-    fetchData(quotesURL);
-    fetchImage(imageURL);
+    fetchData();
   };
 
   const date = new Date();
   const shareDate = date.toDateString();
   console.log(shareDate);
   return (
-    <Card>
-      <Card.Header>Clever Quotes</Card.Header>
-      {/* handle image Error */}
-      {imageError && (
-        <Alert variant="danger">
-          Something went wrong while getting the image. <br /> Please try again.{" "}
-          <hr />
-          Beim Abrufen des Bildes ist ein Fehler aufgetreten. <br /> Bitte
-          versuchen Sie es erneut.
-        </Alert>
-      )}
-      {/* handle image loading */}
-      {loadingImage ? (
-        <div className="col mx-auto">
-          <Spinner animation="border" variant="primary" role="status" />
-          <p>Loading image...</p>
-        </div>
-      ) : (
-        <Card.Img src={image} alt="random image for a random quote" />
-      )}
+    <>
+      <Card>
+        <Card.Header>Clever Quotes</Card.Header>
 
-      <Card.Body>
-        <blockquote className="blockquote mb-3">
-          {/* handle quote Error */}
+        <Card.Body>
           {dataError && (
             <Alert variant="danger">
               Something went wrong while getting the quote. <br /> Please try
@@ -113,43 +89,42 @@ function App() {
               versuchen Sie es erneut.
             </Alert>
           )}
-          {/* handle quote loading */}
           {loadingData ? (
             <>
               <Spinner variant="primary" animation="grow" role="status" />
               <p>Loading quote...</p>
             </>
           ) : (
-            <p>{data.content}</p>
+            <QuotesCard
+              image={image}
+              content={data.content}
+              author={data.author}
+            />
           )}
-
-          <footer className="blockquote-footer mt-3">
-            <cite title={data.title}>{data.author}</cite>
-          </footer>
-        </blockquote>
-      </Card.Body>
-      <Card.Footer>
-        <Stack
-          className="col mx-auto justify-content-evenly"
-          // in-line styling
-          gap={4}
-          direction="horizontal"
-        >
-          <Button className="primary" onClick={handleNewQuote}>
-            Neu Quote
-          </Button>
-          <WhatsappShareButton
-            url={"https://clever-quotes-app.netlify.app/"}
+        </Card.Body>
+        <Card.Footer>
+          <Stack
+            className="col mx-auto justify-content-evenly"
             // in-line styling
-            size={32}
-            title={`"${data.content}" ${"\n"} ~ ${data.author} ${"\n"} ${"\n"}
-            Date Shared: ${shareDate}`}
+            gap={4}
+            direction="horizontal"
           >
-            <IoLogoWhatsapp className="whatsapp" />
-          </WhatsappShareButton>
-        </Stack>
-      </Card.Footer>
-    </Card>
+            <Button variant="outline-primary" onClick={handleNewQuote}>
+              <FaRandom />
+            </Button>
+            <WhatsappShareButton
+              url={"https://clever-quotes-app.netlify.app/"}
+              // in-line styling
+              size={32}
+              title={`"${data.content}" ${"\n"} ~ ${data.author} ${"\n"} ${"\n"}
+            Date Shared: ${shareDate}`}
+            >
+              <IoLogoWhatsapp className="whatsapp" />
+            </WhatsappShareButton>
+          </Stack>
+        </Card.Footer>
+      </Card>
+    </>
   );
 }
 
