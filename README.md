@@ -6,7 +6,7 @@ Description is available in the following translations / Die Beschreibung liegt 
 
 [German (Deutsch)](#german)<br>
 
-![Randomquotes-app Screenshot](./public/Randomquotes-app-screenshot.png "Randomquotes-app Screenshot")
+![Randomquotes-app Screenshot](src/assets/images/random-quote.gif "Randomquotes-app Screenshot")
 
 ## :star_struck: Working Application Link:
 
