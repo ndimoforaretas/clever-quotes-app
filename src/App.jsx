@@ -107,8 +107,7 @@ function App() {
             className="col mx-auto justify-content-evenly"
             // in-line styling
             gap={4}
-            direction="horizontal"
-          >
+            direction="horizontal">
             <Button variant="outline-primary" onClick={handleNewQuote}>
               <FaRandom />
             </Button>
@@ -116,9 +115,7 @@ function App() {
               url={"https://clever-quotes-app.netlify.app/"}
               // in-line styling
               size={32}
-              title={`"${data.content}" ${"\n"} ~ ${data.author} ${"\n"} ${"\n"}
-            Date Shared: ${shareDate}`}
-            >
+              title={`😌 ${"\n"} "${data.content}"  ~ ${data.author}`}>
               <IoLogoWhatsapp className="whatsapp" />
             </WhatsappShareButton>
           </Stack>
