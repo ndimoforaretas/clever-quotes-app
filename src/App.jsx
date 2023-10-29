@@ -115,7 +115,9 @@ function App() {
               url={"https://clever-quotes-app.netlify.app/"}
               // in-line styling
               size={32}
-              title={`😌 ${"\n"} "${data.content}"  ~ ${data.author}`}>
+              title={`${"\n"} "${data.content}" ${"\n"} 😌  ${"\n"} ~ ${
+                data.author
+              }`}>
               <IoLogoWhatsapp className="whatsapp" />
             </WhatsappShareButton>
           </Stack>
