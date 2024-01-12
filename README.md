@@ -22,7 +22,7 @@ Description is available in the following translations / Die Beschreibung liegt 
 
 Dies ist ein Anfänger freundlich Spaß ReactJs Projekt.
 
-Es ist die klassische Random Quote Generator App, die auf Luke Peaveys Random Quotes API basiert.
+Es ist die klassische Random Quote Generator App, die auf API Ninjas API basiert.
 
 Da ich es liebe, Zitate über meinen WhatsApp-Status zu teilen, habe ich die WhatsApp-Share-Funktionalität dank des React Share NPM-Pakets zur App hinzugefügt.
 
@@ -38,13 +38,13 @@ Alle Links sind unten aufgeführt.
 
 ## :cowboy_hat_face: Verwendetes API:
 
-- [Random Quotes API](https://github.com/lukePeavey/quotable) für die zufälligen Zitate
+- [API Ninjas 🥷](https://api-ninjas.com/api/quotes) für die zufälligen Zitate
 
 - [Lorem Picsum](https://picsum.photos/) für die zufälligen Bilder.
 
 ```
 
-https://api.quotable.io/random
+https://api-ninjas.com/api/quotes
 
 ```
 
@@ -147,7 +147,7 @@ npm i vite-plugin-pwa -D
 
 This PWA (Progressive Web App) is a beginner friendly fun ReactJs project.
 
-It's the classic Random Quote Generator App based off of Luke Peavey's Random Quotes API.
+It's the classic Random Quote Generator App based off of API Ninjas Quotes.
 
 Because I love sharing quotes on my WhatsApp status, I added the WhatsApp share functionality to the app thanks to the React Share NPM package.
 
@@ -163,14 +163,14 @@ All the links are listed below.
 
 ## :cowboy_hat_face: APIs used:
 
-- [Random Quotes API](https://github.com/lukePeavey/quotable) for the random Quotes
+- [API Ninjas 🥷](https://api-ninjas.com/api/quotes) for the random Quotes
 
 - [Lorem Picsum](https://picsum.photos/) for the random Pictures.
 
 ```
 
 // quotes
-https://api.quotable.io/random
+https://api.api-ninjas.com/v1/quotes?category=inspirational
 
 // images
 https://picsum.photos/seed/picsum/200/300

@@ -17,7 +17,8 @@ import QuotesCard from "./components/QuotesCard";
 
 function App() {
   // url variable declarations
-  const quotesURL = "https://api.quotable.io/random";
+  const quotesURL =
+    "https://api.api-ninjas.com/v1/quotes?category=inspirational";
   const imageURL = "https://picsum.photos/300/500";
 
   // set state declaraions:
@@ -41,14 +42,19 @@ function App() {
 
     try {
       // fetch random quotes
-      const quoteContent = await fetch(quotesURL);
+      const quoteContent = await fetch(quotesURL, {
+        method: "GET",
+        headers: {
+          "X-Api-Key": import.meta.env.VITE_API_KEY,
+        },
+      });
       if (!quoteContent) {
         throw new Error("quote not found");
       }
       const data = await quoteContent.json();
 
       // set quote data
-      setData(data);
+      setData(data[0]);
 
       // fetch random image
       const imageContent = await fetch(imageURL);
@@ -74,7 +80,7 @@ function App() {
 
   const date = new Date();
   const shareDate = date.toDateString();
-  console.log(shareDate);
+
   return (
     <>
       <Card>
@@ -97,7 +103,7 @@ function App() {
           ) : (
             <QuotesCard
               image={image}
-              content={data.content}
+              content={data.quote}
               author={data.author}
             />
           )}
@@ -115,7 +121,7 @@ function App() {
               url={"https://clever-quotes-app.netlify.app/"}
               // in-line styling
               size={32}
-              title={`${"\n"} "${data.content}" ${"\n"} 😌  ${"\n"} ~ ${
+              title={`${"\n"} "${data.quote}" ${"\n"} 😌  ${"\n"} ~ ${
                 data.author
               }`}>
               <IoLogoWhatsapp className="whatsapp" />
