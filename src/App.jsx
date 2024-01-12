@@ -118,7 +118,7 @@ function App() {
               <FaRandom />
             </Button>
             <WhatsappShareButton
-              url={"https://clever-quotes-app.netlify.app/"}
+              url={"https://clever-quotes-app.vercel.app/"}
               // in-line styling
               size={32}
               title={`${"\n"} "${data.quote}" ${"\n"} 😌  ${"\n"} ~ ${
