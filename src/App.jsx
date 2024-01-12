@@ -89,7 +89,7 @@ function App() {
         <Card.Body>
           {dataError && (
             <Alert variant="danger">
-              Something went wrong while getting the quote. <br /> Please try
+              Something went wrong with the quote fetch. <br /> Please try
               again. <hr />
               Beim Abrufen des Zitats ist ein Fehler aufgetreten. <br /> Bitte
               versuchen Sie es erneut.
