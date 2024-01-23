@@ -17,8 +17,7 @@ import QuotesCard from "./components/QuotesCard";
 
 function App() {
   // url variable declarations
-  const quotesURL =
-    "https://api.api-ninjas.com/v1/quotes?category=inspirational";
+  const quotesURL = "https://api.quotable.io/quotes/random";
   const imageURL = "https://picsum.photos/300/500";
 
   // set state declaraions:
@@ -42,12 +41,7 @@ function App() {
 
     try {
       // fetch random quotes
-      const quoteContent = await fetch(quotesURL, {
-        method: "GET",
-        headers: {
-          "X-Api-Key": import.meta.env.VITE_API_KEY,
-        },
-      });
+      const quoteContent = await fetch(quotesURL);
       if (!quoteContent) {
         throw new Error("quote not found");
       }
@@ -103,7 +97,7 @@ function App() {
           ) : (
             <QuotesCard
               image={image}
-              content={data.quote}
+              content={data.content}
               author={data.author}
             />
           )}
