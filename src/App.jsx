@@ -115,7 +115,7 @@ function App() {
               url={"https://clever-quotes-app.vercel.app/"}
               // in-line styling
               size={32}
-              title={`${"\n"} "${data.quote}" ${"\n"} 😌  ${"\n"} ~ ${
+              title={`${"\n"} "${data.content}" ${"\n"} 😌  ${"\n"} ~ ${
                 data.author
               }`}>
               <IoLogoWhatsapp className="whatsapp" />
